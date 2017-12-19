@@ -1,7 +1,8 @@
 import time
 import sys, getopt
 import datetime
-from poloniex import poloniex
+
+import poloniex
 
 # main function - where the whole program rests
 # TODO create an object oriented structure with modules
@@ -51,7 +52,7 @@ def main(argv):
 
 
 
-	conn = poloniex('key goes here','key goes here') # definition of the connection with the poloniex API
+	conn = poloniex.Public('key goes here','key goes here') # definition of the connection with the poloniex API
 
 	output = open("chart.html",'w') # create an empty chart HTML file
 	output.truncate() # truncate the file size with no value - variable size
