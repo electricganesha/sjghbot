@@ -6,7 +6,22 @@ Better descriptions will come.
 ### Pre-requisites
 
 Have [Docker](https://docs.docker.com/engine/installation/#desktop) installed.
-If you're on Linux make sure your user is [added to the `docker` group](https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user).
+If you're on Linux make sure your user is [added to the `docker` group]
+(https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user).
+
+`sjghbot` expects you to have properly set environment variable lists to pass to `docker run`.
+These live in `.private/<env>.list` files, where `<env>` can be `local`, `test` and `prod`.
+Be sure to follow the [official example]
+(https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e-env-env-file).
+These are currently the vars you're expected to set:
+
+    $ cat .private/local.list 
+    SJGHBOT_POLONIEX_KEY=you
+    SJGHBOT_POLONIEX_SECRET=wish
+    SJGHBOT_TWITTER_CONSUMER_KEY=sad98yua9s8dyuasd
+    SJGHBOT_TWITTER_CONSUMER_SECRET=asjdpoa8usd098ua98syud9yads
+    SJGHBOT_TWITTER_ACCESS_TOKEN_KEY=oiHJU98yua9s8dyu9aysd9hya9syd9a8ys9d
+    SJGHBOT_TWITTER_ACCESS_TOKEN_SECRET=kjnamnxnclkasdahsdhwlkh
 
 
 ### Development setup
