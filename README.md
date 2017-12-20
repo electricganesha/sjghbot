@@ -22,3 +22,14 @@ container as well.
 
 1. Build your local test Docker image with extra testing dependencies with `./build-test.sh`.
 2. Running `./run-test.sh` will run the tests (uses `pytest`).
+
+
+### Deploying and running
+
+Note: I realize this deployment process can be simplified a bit - still a WIP.
+
+1. If you want to make a new release, up the $VERSION in `./build.sh` and run it.
+2. From your server/machine of choice, clone this repo.
+3. `run.sh` - this pulls and runs the image you just pushed.
+
+Databases/assets get mounted on the `data/` directory on the root of your repo.
