@@ -4,8 +4,8 @@ RUN mkdir -p /sjghbot
 ADD . /sjghbot/
 
 RUN pip3 install --no-cache-dir --upgrade pip six
-RUN pip3 install -r /sjghbot/requirements.txt
+RUN pip3 install -r /sjghbot/requirements_test.txt
 
 WORKDIR /sjghbot
 
-CMD ["python", "/sjghbot/sjghbot.py"]
+CMD ["pytest", "tests"]

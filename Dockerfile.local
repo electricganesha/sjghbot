@@ -6,4 +6,6 @@ ADD . /sjghbot/
 RUN pip3 install --no-cache-dir --upgrade pip six
 RUN pip3 install -r /sjghbot/requirements_local.txt
 
+WORKDIR /sjghbot
+
 CMD ["/bin/bash"]
