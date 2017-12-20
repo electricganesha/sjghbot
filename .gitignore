@@ -1,4 +1,6 @@
 data/
 static/
 
+.private/
+
 __pycache__
